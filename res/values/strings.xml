@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BadukTimer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="white_clock_text">White Clock</string>
+    <string name="black_clock_text">Black Clock</string>
+
+</resources>
