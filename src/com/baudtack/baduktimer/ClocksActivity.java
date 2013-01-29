@@ -13,6 +13,7 @@ public class ClocksActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_clocks);
         this.wClockButton = (Button)this.findViewById(R.id.white_button);
         this.bClockButton = (Button)this.findViewById(R.id.black_button);

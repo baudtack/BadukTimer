@@ -16,6 +16,7 @@ public abstract class GameClock extends CountDownTimer {
 		super(seconds * 1000, 1000);
 		this.tv = tv;
 		this.timeRemaining = seconds;
+    
 	}
 
 	public void pause(){
