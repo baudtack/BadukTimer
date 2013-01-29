@@ -21,7 +21,7 @@ public class ClockButtonClickListener implements OnClickListener {
 		}
 		
 		Button b = null;
-   		ViewGroup row = (ViewGroup) v.getParent();
+  		ViewGroup row = (ViewGroup) v.getParent();
 		for (int itemPos = 0; itemPos < row.getChildCount(); itemPos++) {
 		    View view = row.getChildAt(itemPos);
 		    if (view instanceof Button && view.getId() == opponentButton) {

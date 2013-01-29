@@ -16,6 +16,7 @@ public abstract class GameClock extends CountDownTimer {
 		super(seconds * 1000, 1000);
 		this.tv = tv;
 		this.timeRemaining = seconds;
+    
 	}
 
 	public void pause(){
@@ -27,6 +28,7 @@ public abstract class GameClock extends CountDownTimer {
 		GameClock t;
 		if(this.status == ClockState.INACTIVE) {
 			t = (GameClock)this.begin();
+			
 		} else {
 			t = this.resume();
 		}
@@ -38,6 +40,10 @@ public abstract class GameClock extends CountDownTimer {
 	@Override
 	public void onTick(long millisUntilFinished) {
 		this.timeRemaining = millisUntilFinished / 1000;
+		this.displayTime();
+	}
+	
+	public void displayTime() {
 		this.tv.setText(this.formatSeconds(this.timeRemaining));
 	}
 	
