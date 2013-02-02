@@ -11,6 +11,7 @@ public class AbsoluteGameClock extends GameClock {
 	@Override
 	public void onFinish() {
 		this.tv.setText("all done!");
+		super.onFinish();
 	}
 	
 	@Override
@@ -20,9 +21,5 @@ public class AbsoluteGameClock extends GameClock {
 		return t;
 	}
 
-	@Override
-	public void onTick(long millisUntilFinished) {
-		super.onTick(millisUntilFinished);
-	}
 
 }

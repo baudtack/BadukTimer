@@ -1,6 +1,9 @@
 package com.baudtack.baduktimer;
 import android.os.CountDownTimer;
 
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 public abstract class GameClock extends CountDownTimer {
@@ -17,6 +20,18 @@ public abstract class GameClock extends CountDownTimer {
 		this.tv = tv;
 		this.timeRemaining = seconds;
     
+	}
+
+	@Override
+	public void onFinish() {
+		ViewGroup row = (ViewGroup) this.tv.getParent();
+		for (int itemPos = 0; itemPos < row.getChildCount(); itemPos++) {
+		    View view = row.getChildAt(itemPos);
+		    if (view instanceof Button) {
+		         Button b = (Button) view;
+		         b.setEnabled(false);
+		    }
+		}
 	}
 
 	public void pause(){
